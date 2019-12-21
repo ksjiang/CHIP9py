@@ -32,7 +32,7 @@ What?! Why is there an illegal operation? Let's disassemble the first instructio
 
 ```
 	NOP
-	JMPH 0x05a3
+>	JMPH 0x05a3
 	...
 ```
 
