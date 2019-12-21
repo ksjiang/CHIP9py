@@ -7,7 +7,7 @@ The challenge itself consists of uncovering the flag from two binaries, one of w
 
 The final running speed of the emulator is unacceptable - it takes approximately **3 minutes** to print the image from the boot ROM. It turns out that this is due to a loop in the boot ROM at address `0x002f`
 
-![Loop in Boot ROM](https://github.com/siyujiang81/CHIP9py/blob/master/img/Screenshot%202019-12-21%2017.16.47.png)
+![Loop in Boot ROM](https://github.com/siyujiang81/CHIP9py/blob/master/img/Screenshot%202019-12-21%2017.55.17.png)
 
 which can be disassembled to the following:
 
@@ -20,7 +20,7 @@ which can be disassembled to the following:
 
 In other words, `0xff` is added onto `DE` until that register pair is `0`. This can take a long time indeed! So, we can speed up the execution by changing the loop condition to a `JMPN` (jump if negative) instead:
 
-![Patched Loop in Boot ROM](https://github.com/siyujiang81/CHIP9py/blob/master/img/Screenshot%202019-12-21%2017.12.10.png)
+![Patched Loop in Boot ROM](https://github.com/siyujiang81/CHIP9py/blob/master/img/Screenshot%202019-12-21%2017.56.15.png)
 
 Now boot happens very quickly. We load the program ROM into address `0x597`, as requested, and run the program, but run into another issue just after entering the ROM:
 
