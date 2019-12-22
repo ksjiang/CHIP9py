@@ -44,4 +44,6 @@ Now when we run the program, we get the flag flashed out on the screen! Part of 
 
 ![Part of Flag](https://github.com/siyujiang81/CHIP9py/blob/master/img/Screenshot%202019-12-21%2017.44.52.png)
 
+A video clip can be found [here](https://github.com/siyujiang81/CHIP9py/blob/master/img/CHIP9.mp4).
+
 **Flag:** `X-MAS{CHIP9_m0re_l1ke_l0ve_4t_4st_s1ght}`
